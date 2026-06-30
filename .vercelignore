@@ -1,0 +1,5 @@
+_crawl/
+images-raw/
+sales/
+node_modules/
+.DS_Store
