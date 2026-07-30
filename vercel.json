@@ -3,46 +3,157 @@
   "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/page/24590-:s*", "destination": "/construction", "permanent": true },
-    { "source": "/page/24588-:s*", "destination": "/maintenance", "permanent": true },
-    { "source": "/page/24589-:s*", "destination": "/planting", "permanent": true },
-    { "source": "/page/24565-:s*", "destination": "/about", "permanent": true },
-    { "source": "/page/24593-:s*", "destination": "/specials", "permanent": true },
-    { "source": "/page/25289-:s*", "destination": "/specials", "permanent": true },
-    { "source": "/page/24591-:s*", "destination": "/contact", "permanent": true },
-    { "source": "/page/25282-:s*", "destination": "/photos", "permanent": true },
-    { "source": "/page/24599-:s*", "destination": "/commercial", "permanent": true },
-    { "source": "/page/24564-:s*", "destination": "/contact", "permanent": true },
-    { "source": "/page/24646-:s*", "destination": "/snow-ice-management", "permanent": true },
-    { "source": "/page/24647-:s*", "destination": "/parking-lot-maintenance", "permanent": true },
-    { "source": "/page/24645-:s*", "destination": "/spring-fall-cleanup", "permanent": true },
-    { "source": "/page/33824-:s*", "destination": "/retail-mulch", "permanent": true },
-    { "source": "/page/:rest*", "destination": "/", "permanent": true }
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "aca-landscaping.vercel.app"
+        }
+      ],
+      "destination": "https://acalandscapingct.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "aca-landscaping.vercel.app"
+        }
+      ],
+      "destination": "https://acalandscapingct.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/page/24590-:s*",
+      "destination": "/construction",
+      "permanent": true
+    },
+    {
+      "source": "/page/24588-:s*",
+      "destination": "/maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/page/24589-:s*",
+      "destination": "/planting",
+      "permanent": true
+    },
+    {
+      "source": "/page/24565-:s*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/page/24593-:s*",
+      "destination": "/specials",
+      "permanent": true
+    },
+    {
+      "source": "/page/25289-:s*",
+      "destination": "/specials",
+      "permanent": true
+    },
+    {
+      "source": "/page/24591-:s*",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/page/25282-:s*",
+      "destination": "/photos",
+      "permanent": true
+    },
+    {
+      "source": "/page/24599-:s*",
+      "destination": "/commercial",
+      "permanent": true
+    },
+    {
+      "source": "/page/24564-:s*",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/page/24646-:s*",
+      "destination": "/snow-ice-management",
+      "permanent": true
+    },
+    {
+      "source": "/page/24647-:s*",
+      "destination": "/parking-lot-maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/page/24645-:s*",
+      "destination": "/spring-fall-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/page/33824-:s*",
+      "destination": "/retail-mulch",
+      "permanent": true
+    },
+    {
+      "source": "/page/:rest*",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/(.*)\\.html",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/css/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     },
     {
       "source": "/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     },
     {
       "source": "/images/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ]
 }
